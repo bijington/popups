@@ -26,7 +26,7 @@ public static class MauiProgram
         builder.Services.AddTransient<Pages.MainPage>();
         builder.Services.AddTransient<MainPageViewModel>();
 
-		PopupService.RegisterPopup<ConfirmationPopupView, ConfirmationPopupViewModel>(builder.Services);
+        builder.Services.RegisterPopup<ConfirmationPopupView, ConfirmationPopupViewModel>();
         builder.Services.AddSingleton<PopupService>();
 
         return builder.Build();
